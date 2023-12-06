@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public int currentHealth;
+    public int currentHealth;                //declare public integers variables for health
     public int maxHealth;
 
     public Transform startPos;
@@ -14,8 +14,8 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 5;
-        currentHealth = maxHealth;
+        maxHealth = 5;                       //declare health intger value
+        currentHealth = maxHealth;          
     }
 
     // Update is called once per frame
@@ -24,12 +24,12 @@ public class Health : MonoBehaviour
 
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount)                //declare integer change on damage collision
     {
         currentHealth -= amount;
         transform.position = new Vector2(startPos.position.x, startPos.position.y);
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0)                      //condition for health integer value to alter game state 
         {
             SceneManager.LoadScene("GameOver");
         }

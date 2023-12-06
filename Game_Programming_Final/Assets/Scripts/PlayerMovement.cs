@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10f;
-        jump = 400f;
+        speed = 10f;                                                       //set vaiable for move force
+        jump = 400f;                                                       //set variable for jump force
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -25,20 +25,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move = Input.GetAxis("Horizontal");
+        move = Input.GetAxis("Horizontal");                                  //set input for movement
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump") && !isJumping)                      //set imput for jump function
         {
             Debug.Log("space");
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            rb.AddForce(new Vector2(rb.velocity.x, jump));                  //declare jump function
             isJumping = true;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)                       //declare collision function for "Ground"
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))                           //declare conditition Ground collision
         {
             isJumping = false;
         }

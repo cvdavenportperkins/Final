@@ -6,7 +6,7 @@ public class CameraMove : MonoBehaviour
 {
 
     //variables
-    public GameObject target;
+    public GameObject target;                               //declare GameObject variable
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.transform.position.x, transform.position.y, -10);
+        transform.position = new Vector3(target.transform.position.x, transform.position.y, -10);                //declare transform camera function for the tartget variable
     }
 }

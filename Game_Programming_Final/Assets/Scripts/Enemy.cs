@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damage = hitPoints.GetComponent<Health>();
+        damage = hitPoints.GetComponent<Health>();           //declare damage function and health components script 
     }
 
 
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnTriggerEnter2D(Collider2D coll)                 //declare trigger for damage function and conditions for emeny collisions
     {
         if (coll.tag == "Player")
         {
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
             left = true;
         }
 
-        void OnCollisionEnter2D(Collision2D other)
+        void OnCollisionEnter2D(Collision2D other)               //log collisions to console
         {
             Debug.Log("Hit");
         }
