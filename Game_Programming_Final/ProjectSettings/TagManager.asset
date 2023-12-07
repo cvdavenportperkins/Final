@@ -11,6 +11,8 @@ TagManager:
   - Health_Up
   - Ground
   - StarPos
+  - Boundary
+  - GameOver
   layers:
   - Default
   - TransparentFX

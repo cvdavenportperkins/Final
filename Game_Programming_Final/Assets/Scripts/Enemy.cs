@@ -4,12 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{ 
+{
     Health damage;
 
     public GameObject hitPoints;
 
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D coll)                 //declare trigger for damage function and conditions for emeny collisions
@@ -32,20 +32,21 @@ public class Enemy : MonoBehaviour
             damage.TakeDamage(1);
         }
 
-        if (coll.tag =="Enemy" && left == true)
+        if (coll.tag == "Enemy" && left == true)
         {
             left = false;
         }
 
-        else if (coll.tag == "Enemy" && left == false) 
+        else if (coll.tag == "Enemy" && left == false)
         {
             left = true;
         }
-
-        void OnCollisionEnter2D(Collision2D other)               //log collisions to console
-        {
-            Debug.Log("Hit");
-        }
-
     }
+
+    void OnCollisionEnter2D(Collision2D other)               //log collisions to console
+    {
+        Debug.Log("Hit");
+    }
+
 }
+
