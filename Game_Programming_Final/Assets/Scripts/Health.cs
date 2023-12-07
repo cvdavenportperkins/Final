@@ -50,6 +50,7 @@ public class Health : MonoBehaviour
                 lifeImages[i].color = inactiveColor;  // Added else condition to handle inactive lives
             }
         }
+        
     }
 
     public void TakeDamage(int amount)                //declare integer change on damage collision
@@ -57,10 +58,10 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         transform.position = new Vector2(startPos.position.x, startPos.position.y);
 
-        if (currentHealth <= 0)                      //condition for health integer value to alter game state 
+        if (currentHealth == 0)                      //condition for health integer value to alter game state 
         {
-            currentLives--;                           // Decrease lives when health reaches 0
-            if (currentLives <= 0)
+            currentLives--;                           // Decrease li ves when health reaches 0
+            if (currentLives == 0)
             {
                 SceneManager.LoadScene("GameOver");
             }
@@ -74,7 +75,7 @@ public class Health : MonoBehaviour
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.CompareTag("Boundary"))         //Game Over on boundary collision
+            if (collision.gameObject.CompareTag("Border"))         //Game Over on boundary collision
             {
                 
                 SceneManager.LoadScene("GameOver");

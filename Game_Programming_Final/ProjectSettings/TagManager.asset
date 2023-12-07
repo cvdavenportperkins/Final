@@ -12,7 +12,7 @@ TagManager:
   - Ground
   - StarPos
   - Boundary
-  - GameOver
+  - Border
   layers:
   - Default
   - TransparentFX
