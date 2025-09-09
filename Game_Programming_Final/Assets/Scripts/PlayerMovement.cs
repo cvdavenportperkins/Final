@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float move;
     public float jump;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     bool isJumping;
 
