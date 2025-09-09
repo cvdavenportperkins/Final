@@ -1736,6 +1736,7 @@ MonoBehaviour:
   speed: 0
   move: 0
   jump: 0
+  rb: {fileID: 1785115072}
 --- !u!114 &1785115077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,6 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: facb3895e5ca3d14eb963486c3c03d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   currentHealth: 0
   maxHealth: 0
   maxLives: 0
@@ -1760,6 +1762,11 @@ MonoBehaviour:
   lifeColor: {r: 0, g: 1, b: 0, a: 1}
   healthColor: {r: 1, g: 0, b: 0, a: 1}
   inactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+=======
+  currentHealth: 5
+  maxHealth: 5
+  startPos: {fileID: 1039728413}
+>>>>>>> Stashed changes
 --- !u!1 &1839382945
 GameObject:
   m_ObjectHideFlags: 0
